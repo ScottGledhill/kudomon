@@ -24,8 +24,4 @@ class Location
   def create_random_location
     kudomon.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
   end
-
-  def current_location
-    kudomon.map {|kudo| kudo}
-  end
 end

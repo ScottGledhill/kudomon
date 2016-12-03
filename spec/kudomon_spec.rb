@@ -35,20 +35,27 @@ describe Kudomon do
 
     it 'can move west' do
       kudomon.move('w')
-      expect(kudomon.coordinates).to eq [-1,0]
+      kudomon.move('w')
+      expect(kudomon.coordinates).to eq [-2,0]
     end
   end
 
   context 'finding kudomon' do
     it 'can check if a kudomon is not at these coordinates' do
       kudomon.move('s')
-      expect(kudomon.kudomon_check([19,-1])).to eq 'Nothing here'
+      expect(kudomon.move('w')).to eq 'Nothing here'
     end
 
-
     it 'can check if a kudomon is at these coordinates and add to collection' do
-      allow(kudomon).to receive(:kudomon_check).and_return('Sourbulb was added to your collection')
-      expect(kudomon.kudomon_check([0, 1])).to eq 'Sourbulb was added to your collection'
+      allow(kudomon).to receive(:move).and_return('Sourbulb was added to your collection')
+      expect(kudomon.move('n')).to eq 'Sourbulb was added to your collection'
+    end
+  end
+
+  context 'nearby kudomon' do
+    it 'can find nearby a kudomon with 2 in either direction' do
+      kudomon.move('n')
+      expect(kudomon.nearby?).to eq true
     end
   end
 end
