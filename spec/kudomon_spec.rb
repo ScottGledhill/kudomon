@@ -32,5 +32,10 @@ describe Kudomon do
       kudomon.move('e')
       expect(kudomon.coordinates).to eq [1,0]
     end
+
+    it 'can move west' do
+      kudomon.move('w')
+      expect(kudomon.coordinates).to eq [-1,0]
+    end
   end
 end
