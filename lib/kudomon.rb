@@ -10,6 +10,7 @@ class Kudomon
   end
 
   def move(direction)
-    p @coordinates[1] -= 1
+    @coordinates[1] =+ 1 if direction == 'n'
+    @coordinates[1] -= 1 if direction == 's'
   end
 end
