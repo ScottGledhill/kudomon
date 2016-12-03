@@ -40,9 +40,14 @@ describe Kudomon do
   end
 
   context 'finding kudomon' do
-    it 'can add a kudomon to array if at the same location' do
+    it 'can check if a kudomon is at these coordinates' do
       kudomon.move('s')
-      expect(kudomon.check_for_kudomon).to eq [0,0]
+      expect(kudomon.kudomon_check?([0,0])).to eq [0,0]
     end
+  end
+
+  it 'can add a kudomon to collection' do
+    kudomon.kudomon_check?([0,1])
+    expect(kudomon.kudomon).to eq []
   end
 end
