@@ -19,6 +19,10 @@ class Kudomon
     kudomon_check(coordinates)
   end
 
+  def nearby?
+    # return 'nearby' if
+  end
+
   private
 
   def kudomon_check(coordinates)
@@ -27,7 +31,7 @@ class Kudomon
   end
 
   def kudomon_add(coordinates)
-    caught_kudo = location.kudomon.select!{|kudo| kudo[:location] == coordinates }
+    caught_kudo = location.kudomon.select{|kudo| kudo[:location] == coordinates }
     kudomon << caught_kudo
     "#{caught_kudo[0][:name]} was added to your collection"
   end

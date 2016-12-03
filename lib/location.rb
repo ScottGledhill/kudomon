@@ -23,5 +23,6 @@ class Location
 
   def create_random_location
     kudomon.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
+    kudomon.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
   end
 end

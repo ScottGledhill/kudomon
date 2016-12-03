@@ -47,7 +47,7 @@ describe Kudomon do
     end
 
     it 'can check if a kudomon is at these coordinates and add to collection' do
-      allow(kudomon).to receive(:move).and_return('Sourbulb was added to your collection')
+      kudomon.move('n')
       expect(kudomon.move('n')).to eq 'Sourbulb was added to your collection'
     end
   end
