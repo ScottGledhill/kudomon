@@ -3,16 +3,24 @@ require 'kudomon'
 describe Kudomon do
   subject(:kudomon) {described_class.new}
 
-  it 'initializes with coordinates at 0,0' do
-    expect(kudomon.coordinates).to eq [0,0]
+  context 'on creation' do
+    it 'initializes with coordinates at 0,0' do
+      expect(kudomon.coordinates).to eq [0,0]
+    end
+
+    it 'initializes with only one kudomon' do
+      expect(kudomon.kudomon.length).to eq 1
+    end
+
+    it 'initializes with Chickapu' do
+      expect(kudomon.kudomon.first).to include(:name => "Chickapu")
+    end
   end
 
-
-  it 'initializes with only one kudomon' do
-    expect(kudomon.kudomon.length).to eq 1
-  end
-
-  it 'initializes with Chickapu' do
-    expect(kudomon.kudomon.first).to include(:name => "Chickapu")
+  context 'moving' do
+    it 'can move south' do
+      kudomon.move('s')
+      expect(kudomon.coordinates).to eq [-1, 0] 
+    end
   end
 end

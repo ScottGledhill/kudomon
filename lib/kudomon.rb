@@ -8,6 +8,7 @@ class Kudomon
     @coordinates = [0,0]
     @kudomon = [ELECTRIC_KUDOMON['Chickapu']]
   end
-  # def move
-  # end
+
+  def move()
+  end
 end
