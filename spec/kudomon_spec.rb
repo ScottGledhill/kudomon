@@ -13,6 +13,6 @@ describe Kudomon do
   end
 
   it 'initializes with Chickapu' do
-    expect(kudomon.kudomon).to eq [Electric]
+    expect(kudomon.kudomon.first).to include(:name => "Chickapu")
   end
 end

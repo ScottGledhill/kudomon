@@ -10,7 +10,7 @@ module Electric
 
    'BuzzElecta' => {
      :name => 'BuzzElecta',
-     :HP => rand(100..200)
+     :HP => rand(100..200),
      :CP => rand(10..50)
    }
   }

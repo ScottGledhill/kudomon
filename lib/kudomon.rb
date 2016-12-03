@@ -6,7 +6,7 @@ class Kudomon
 
   def initialize
     @coordinates = [0,0]
-    p @kudomon = [ELECTRIC_KUDOMON['Chickapu']]
+    @kudomon = [ELECTRIC_KUDOMON['Chickapu']]
   end
   # def move
   # end
