@@ -27,5 +27,9 @@ describe Kudomon do
       kudomon.move('n')
       expect(kudomon.coordinates).to eq [0,1]
     end
+
+    it 'can move east' do
+      kudomon.move('n')
+      expect(kudomon.coordinates).to eq [1,0]
   end
 end
