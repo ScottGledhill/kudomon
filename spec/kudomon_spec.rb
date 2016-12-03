@@ -45,7 +45,9 @@ describe Kudomon do
       expect(kudomon.kudomon_check([19,-1])).to eq 'Nothing here'
     end
 
+
     it 'can check if a kudomon is at these coordinates and add to collection' do
+      allow(kudomon).to receive(:kudomon_check).and_return('Sourbulb was added to your collection')
       expect(kudomon.kudomon_check([0, 1])).to eq 'Sourbulb was added to your collection'
     end
   end
