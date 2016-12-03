@@ -1,5 +1,6 @@
 module Water
 
+  WATER = 
   {
    'Psscannon' => {
      :HP => 12,

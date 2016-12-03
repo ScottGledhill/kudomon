@@ -1,5 +1,6 @@
 module Grass
 
+  GRASS =
   {
    'Sourbulb' => {
      :HP => 100,

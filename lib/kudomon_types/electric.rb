@@ -1,6 +1,6 @@
 module Electric
 
-  ELECTRIC_KUDOMON =
+  ELECTRIC =
   {
    'Chickapu' => {
      :name => 'Chickapu',
@@ -11,7 +11,7 @@ module Electric
    'BuzzElecta' => {
      :name => 'BuzzElecta',
      :HP => rand(100..200),
-     :CP => rand(10..50)
+     :CP => rand(10..50),
    }
   }
 end

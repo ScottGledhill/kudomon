@@ -1,5 +1,6 @@
 module Rock
 
+  ROCK =
   {
    'Goodude' => {
      :HP => 100,

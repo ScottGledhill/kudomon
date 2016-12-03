@@ -38,4 +38,11 @@ describe Kudomon do
       expect(kudomon.coordinates).to eq [-1,0]
     end
   end
+
+  context 'finding kudomon' do
+    it 'can add a kudomon to array if at the same location' do
+      kudomon.move('s')
+      expect(kudomon.check_for_kudomon).to eq [0,0]
+    end
+  end
 end

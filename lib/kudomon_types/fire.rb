@@ -1,12 +1,13 @@
 module Fire
 
+  FIRE =
   {
    'Mancharred' => {
      :HP => 100,
      :CP => 20
    },
 
-   'fatfireface' => {
+   'FatFireFace' => {
      :HP => 100,
      :CP => 12
    }

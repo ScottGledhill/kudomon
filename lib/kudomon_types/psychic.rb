@@ -1,5 +1,6 @@
 module Pyschic
 
+  PYSCHIC =
   {
    'Sleepy' => {
      :HP => 100,
