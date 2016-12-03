@@ -12,5 +12,6 @@ class Kudomon
   def move(direction)
     @coordinates[1] =+ 1 if direction == 'n'
     @coordinates[1] -= 1 if direction == 's'
+    @coordinates[0] =+ 1 if direction == 'e'
   end
 end
