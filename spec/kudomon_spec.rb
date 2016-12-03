@@ -50,6 +50,14 @@ describe Kudomon do
       kudomon.move('n')
       expect(kudomon.move('n')).to eq 'Sourbulb was added to your collection'
     end
+
+    it 'can not catch the same kudomon twice' do
+      kudomon.move('n')
+      kudomon.move('s')
+      kudomon.move('n')
+      expect(kudomon.kudomon.length). to eq 2
+    end
+
   end
 
   context 'nearby kudomon' do
