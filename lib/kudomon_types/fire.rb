@@ -1,4 +1,4 @@
-module Fires
+module Fire
 
   {
    'Mancharred' => {
