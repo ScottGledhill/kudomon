@@ -20,7 +20,7 @@ describe Kudomon do
   context 'moving' do
     it 'can move south' do
       kudomon.move('s')
-      expect(kudomon.coordinates).to eq [-1, 0] 
+      expect(kudomon.coordinates).to eq [0,-1] 
     end
   end
 end
