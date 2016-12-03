@@ -19,7 +19,10 @@ class Kudomon
   end
 
   def kudomon_check(coordinates)
-     location.kudomon.select {|kudo| kudo[:location] == coordinates }
+    return "Nothing here" if location.kudomon.any? {|kudo| kudo[:location] == coordinates} == false
+    caught_kudo = location.kudomon.select!{|kudo| kudo[:location] == coordinates }
+    kudomon << caught_kudo
+    "#{caught_kudo[0][:name]} was added to your collection"
   end
 
   def kudomon_save

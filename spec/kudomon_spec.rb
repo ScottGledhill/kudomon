@@ -42,17 +42,11 @@ describe Kudomon do
   context 'finding kudomon' do
     it 'can check if a kudomon is not at these coordinates' do
       kudomon.move('s')
-      expect(kudomon.kudomon_check([0,-1])).to eq 'Nothing here'
+      expect(kudomon.kudomon_check([19,-1])).to eq 'Nothing here'
     end
 
     it 'can check if a kudomon is at these coordinates and add to collection' do
-      kudomon.move('s')
-      expect(kudomon.kudomon_check([0,-1])).to eq 'Sourbulb was added to your collection'
-    end
-
-    it 'can add a kudomon to collection' do
-      kudomon.kudomon_check([0, 1])
-      expect(kudomon.kudomon.length).to eq 2
+      expect(kudomon.kudomon_check([0, 1])).to eq 'Sourbulb was added to your collection'
     end
   end
 end
