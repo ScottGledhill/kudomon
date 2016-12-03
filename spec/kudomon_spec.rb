@@ -53,9 +53,9 @@ describe Kudomon do
   end
 
   context 'nearby kudomon' do
-    it 'can find nearby a kudomon with 2 in either direction' do
+    it 'can tell you if their are nearby kudomon in either direction' do
       kudomon.move('n')
-      expect(kudomon.nearby?).to eq true
+      expect(kudomon.nearby?).to eq 'Kudomon nearby, keep looking!'
     end
   end
 end

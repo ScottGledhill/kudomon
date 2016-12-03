@@ -20,7 +20,11 @@ class Kudomon
   end
 
   def nearby?
-    # return 'nearby' if
+    locations = location.kudomon.map {|kudo| kudo[:location]}
+    nearby = locations.any? {|loc| loc[0].between?(coordinates[0]-2,
+    coordinates[0]+2) && loc[1].between?(coordinates[0]-2, coordinates[0]+2)}
+    return 'Kudomon nearby, keep looking!' if nearby === true
+    'nothing nearby'
   end
 
   private
