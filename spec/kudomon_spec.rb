@@ -11,4 +11,8 @@ describe Kudomon do
   it 'initializes with only one kudomon' do
     expect(kudomon.kudomon.length).to eq 1
   end
+
+  it 'initializes with Chickapu' do
+    expect(kudomon.kudomon).to eq [Electric]
+  end
 end

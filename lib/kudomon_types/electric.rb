@@ -1,14 +1,17 @@
 module Electric
 
+  ELECTRIC_KUDOMON =
   {
    'Chickapu' => {
-     :HP => 100,
-     :CP => 20
+     :name => 'Chickapu',
+     :HP => rand(1...100),
+     :CP => rand(20...200)
    },
 
    'BuzzElecta' => {
-     :HP => 100,
-     :CP => 10
+     :name => 'BuzzElecta',
+     :HP => rand(100..200)
+     :CP => rand(10..50)
    }
   }
 end
