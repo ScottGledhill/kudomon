@@ -1,14 +1,14 @@
-module Fire
+module Fires
 
   {
-   'Chickapu' => {
+   'Mancharred' => {
      :HP => 100,
      :CP => 20
    },
 
-   'BuzzElecta' => {
+   'fatfireface' => {
      :HP => 100,
-     :CP => 10
+     :CP => 12
    }
   }
 end
