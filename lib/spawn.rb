@@ -1,9 +1,5 @@
-require 'kudomon_types/electric'
-require 'kudomon_types/fire'
-require 'kudomon_types/grass'
-require 'kudomon_types/psychic'
-require 'kudomon_types/rock'
-require 'kudomon_types/water'
+require 'require_all'
+require_all 'lib'
 
 class Spawn
   attr_reader :creatures

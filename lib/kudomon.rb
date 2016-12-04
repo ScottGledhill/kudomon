@@ -1,4 +1,4 @@
-require 'spawn'
+require_relative 'spawn'
 
 class Kudomon
   attr_reader :coordinates, :kudomon, :spawnn

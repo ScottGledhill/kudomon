@@ -30,18 +30,34 @@ class Battle
   end
 
   def player1_attack
-    double_damage?
-    @player2hp = player2hp - player1cp
+    player1_double_damage? ? @player2hp = player2hp - player1cp * 2 : @player2hp = player2hp - player1cp
     return "Player1 wins" if player2hp <= 0
     player2_attack
   end
 
   def player2_attack
-    @player1hp = player1hp - player2cp
+    player2_double_damage? ? @player1hp = player1hp - player2cp * 2 : @player1hp = player1hp - player2cp
     return "Player2 wins" if player1hp <= 0
     player1_attack
   end
 
-  def double_damage
+  private
+
+  def player1_double_damage?
+    return true if player1[0][:type] == 'Water' && player2[0][:type] == 'Fire'
+    return true if player1[0][:type] == 'Fire' && player2[0][:type] == 'Grass'
+    return true if player1[0][:type] == 'Grass' && player2[0][:type] == 'Rock'
+    return true if player1[0][:type] == 'Rock' && player2[0][:type] == 'Electric'
+    return true if player1[0][:type] == 'Electric' && player2[0][:type] == 'Water'
+    return true if player1[0][:type] == 'Pyschic' && player2[0][:type] != 'Pyschic'
+  end
+
+  def player2_double_damage?
+    return true if player2[0][:type] == 'Water' && player1[0][:type] == 'Fire'
+    return true if player2[0][:type] == 'Fire' && player1[0][:type] == 'Grass'
+    return true if player2[0][:type] == 'Grass' && player1[0][:type] == 'Rock'
+    return true if player2[0][:type] == 'Rock' && player1[0][:type] == 'Electric'
+    return true if player2[0][:type] == 'Electric' && player1[0][:type] == 'Water'
+    return true if player2[0][:type] == 'Pyschic' && player1[0][:type] != 'Pyschic'
   end
 end
