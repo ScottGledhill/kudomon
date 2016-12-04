@@ -57,7 +57,6 @@ describe Kudomon do
       kudomon.move('n')
       expect(kudomon.kudomon.length). to eq 2
     end
-
   end
 
   context 'nearby kudomon' do

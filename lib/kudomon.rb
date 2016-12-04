@@ -36,7 +36,8 @@ class Kudomon
 
   def kudomon_add(coordinates)
     caught_kudo = location.kudomon.select{|kudo| kudo[:location] == coordinates }
-    kudomon << caught_kudo
+    kudomon << caught_kudo[0]
+    kudomon.uniq! {|kudo| kudo[:name] == caught_kudo[0][:name] }
     "#{caught_kudo[0][:name]} was added to your collection"
   end
 
