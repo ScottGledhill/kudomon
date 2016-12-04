@@ -29,11 +29,12 @@ player2 = KudomonTrainer.new
 # Check Kudomon Caught
 
 ![caught](https://github.com/ScottGledhill/kudomon/blob/master/images/check_kudomon.png)
-# Create Battle
 
-# Deal damage
+# Create Battle, deal damage, and win!
 
-# Win
+
+
+
 
 -------------
 [Scott Gledhill](https://github.com/ScottGledhill)
