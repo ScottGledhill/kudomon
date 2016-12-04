@@ -7,9 +7,12 @@ class Battle
   end
 
   def fight
-    "#{player1.sample[:name]} vs #{player2.sample[:name]}"
+    versus
+
   end
 
   def versus
+    "#{player1.sample[:name]} vs #{player2.sample[:name]}"
   end
+
 end
