@@ -16,5 +16,10 @@ describe Battle do
       expect(battle.versus).to eq "Chickapu vs Chickapu"
     end
   end
-
+  
+  context 'fighting' do
+    it 'can determine a winner' do
+      expect(battle.fight).to eq 'wins'
+    end
+  end
 end
