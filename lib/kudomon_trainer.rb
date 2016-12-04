@@ -12,11 +12,16 @@ class KudomonTrainer
   end
 
   def move(direction)
-    @coordinates[1] =+ 1 if direction == 'n'
-    @coordinates[1] -= 1 if direction == 's'
-    @coordinates[0] =+ 1 if direction == 'e'
-    @coordinates[0] -= 1 if direction == 'w'
-    kudomon_check(coordinates)
+    if coordinates[0].between?(-10,10) && coordinates[1].between?(-10,10)
+      @coordinates[1] =+ 1 if direction == 'n'
+      @coordinates[1] -= 1 if direction == 's'
+      @coordinates[0] =+ 1 if direction == 'e'
+      @coordinates[0] -= 1 if direction == 'w'
+      kudomon_check(coordinates)
+    else
+      @coordinates = [0,0]
+      'reached edge of the map, go back to the start'
+    end
   end
 
   def nearby?

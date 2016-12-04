@@ -20,7 +20,7 @@ class Spawn
   def create_random_spawn
     creatures.map {|kudo| kudo.store(:HP, rand(100..1000))}
     creatures.map {|kudo| kudo.store(:CP, rand(30..300))}
-    creatures.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
+    creatures.map {|kudo| kudo.store(:location, [rand(-10..10),rand(-10..10)])}
     creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
   end
 end

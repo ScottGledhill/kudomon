@@ -1,5 +1,7 @@
 # kudomon
 
+<!-- #Dir["./lib/*.rb"].each { |file| load file } -->
+
 Imagine that all around us, in a virtual world, are virtual creatures (Kudomon) that you can catch and collect.
 
 A Trainer (like you) can log onto their computer and be unaware that these Kudomon are all around them in geo-virtual space. Your task is to design and build an application through which one can interact with these Kudomon.
