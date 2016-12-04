@@ -31,14 +31,14 @@ class Battle
 
   def player1_attack
     hp = player1_double_damage? ? @player2hp = player2hp - player1cp * 2 : @player2hp = player2hp - player1cp
-    puts "Player1 dealt damage to to Player2 #{hp} remaining"
+    puts "Player1 dealt damage to to Player2 #{hp} HP remaining"
     return "Player1 wins" if player2hp <= 0
     player2_attack
   end
 
   def player2_attack
     hp = player2_double_damage? ? @player1hp = player1hp - player2cp * 2 : @player1hp = player1hp - player2cp
-    puts "Player2 dealt damage to Player1 #{hp} remaining"
+    puts "Player2 dealt damage to Player1 #{hp} HP remaining"
     return "Player2 wins" if player1hp <= 0
     player1_attack
   end
