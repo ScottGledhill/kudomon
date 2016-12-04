@@ -3,11 +3,13 @@ module Rock
   ROCK =
   {
    'Goodude' => {
-     :name => 'Goodude'
+     :name => 'Goodude',
+     :type => 'Rock'
    },
 
    'DwayneJohnson' => {
-     :name => 'DwayneJohnson'
+     :name => 'DwayneJohnson',
+     :type => 'Rock'
    }
   }
 end

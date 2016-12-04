@@ -3,11 +3,13 @@ module Electric
   ELECTRIC =
   {
    'Chickapu' => {
-     :name => 'Chickapu'
+     :name => 'Chickapu',
+     :type => 'Electric'
    },
 
    'BuzzElecta' => {
-     :name => 'BuzzElecta'
+     :name => 'BuzzElecta',
+     :type => 'Electric'
    }
   }
 end

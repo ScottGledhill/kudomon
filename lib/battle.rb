@@ -30,6 +30,7 @@ class Battle
   end
 
   def player1_attack
+    double_damage?
     @player2hp = player2hp - player1cp
     return "Player1 wins" if player2hp <= 0
     player2_attack
@@ -39,5 +40,8 @@ class Battle
     @player1hp = player1hp - player2cp
     return "Player2 wins" if player1hp <= 0
     player1_attack
+  end
+
+  def double_damage
   end
 end

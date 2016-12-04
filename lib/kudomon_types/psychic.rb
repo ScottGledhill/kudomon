@@ -3,11 +3,13 @@ module Pyschic
   PYSCHIC =
   {
    'Sleepy' => {
-     :name => 'Sleepy'
+     :name => 'Sleepy',
+     :type => 'Pyschic'
    },
 
    'Moooooow' => {
-     :name => 'Moooooow'
+     :name => 'Moooooow',
+     :type => 'Pyschic'
    }
   }
 end

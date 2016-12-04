@@ -3,11 +3,13 @@ module Fire
   FIRE =
   {
    'Mancharred' => {
-     :name => 'Mancharred'
+     :name => 'Mancharred',
+     :type => 'Fire'
    },
 
    'FatFireFace' => {
-      :name => 'FatFireFace'
+      :name => 'FatFireFace',
+      :type => 'Fire'
    }
   }
 end
