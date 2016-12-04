@@ -5,8 +5,11 @@
 Clone the repo at git@github.com:ScottGledhill/kudomon.git <br>
 cd into the directory <br>
 Bundle install <br>
-Enter IRB
-Require all the necessary files Dir["./lib/*.rb"].each { |file| load file }
+Enter IRB <br>
+Require all the necessary files 
+```
+Dir["./lib/*.rb"].each { |file| load file }
+```
 
 # How to Play
 
@@ -32,8 +35,7 @@ player2 = KudomonTrainer.new
 
 # Create Battle, deal damage, and win!
 
-
-
+![battle](https://github.com/ScottGledhill/kudomon/blob/master/images/fight.png)
 
 
 -------------
