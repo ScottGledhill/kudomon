@@ -26,9 +26,9 @@ describe Battle do
     it 'can deal damage to kudomon' do
       expect{battle.player1_attack}.to change{battle.player2hp}
     end
-    
+
     it 'can determine a winner' do
-      expect(battle.fight).to eq ''
+      expect(battle.fight).to eq 'Player1 wins'
     end
   end
 end

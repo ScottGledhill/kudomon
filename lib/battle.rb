@@ -36,6 +36,8 @@ class Battle
   end
 
   def player2_attack
-
+    @player1hp = player1hp - player2cp
+    return "Player2 wins" if player1hp <= 0
+    player1_attack
   end
 end
