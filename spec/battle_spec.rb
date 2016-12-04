@@ -11,5 +11,10 @@ describe Battle do
       expect(battle.player1.first).to include(:name => "Chickapu")
       expect(battle.player2.first).to include(:name => "Chickapu")
     end
+
+    it 'can announce who the fight is between' do
+      expect(battle.versus).to eq "Chickapu vs Chickapu"
+    end
   end
+
 end
