@@ -6,7 +6,7 @@ require 'kudomon_types/rock'
 require 'kudomon_types/water'
 
 class Location
-  attr_reader :kudomon
+  attr_reader :creatures
   include Electric
   include Fire
   include Grass
@@ -15,14 +15,14 @@ class Location
   include Water
 
   def initialize
-    @kudomon = [ELECTRIC['Chickapu'],ELECTRIC['BuzzElecta'],FIRE['Mancharred'],
+    @creatures = [ELECTRIC['Chickapu'],ELECTRIC['BuzzElecta'],FIRE['Mancharred'],
     FIRE['FatFireFace'],GRASS['Sourbulb'],GRASS['Execute'],PYSCHIC['Sleepy'],
     PYSCHIC['Moooooow'],ROCK['Goodude'],ROCK['DwayneJohnson'],WATER['Psscannon'],
     WATER['Supersoka']]
   end
 
   def create_random_location
-    kudomon.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
-    kudomon.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
+    creatures.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
+    creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
   end
 end
