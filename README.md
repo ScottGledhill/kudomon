@@ -18,16 +18,22 @@ player1 = KudomonTrainer.new
 player2 = KudomonTrainer.new
 ```
 
-# Move
+# Move and Catch Kudomon
 
-# Catch Kudomon
+![Move](https://github.com/ScottGledhill/kudomon/blob/master/images/catch_kudomon.png)
 
 # Check Coordinates
 
+![coordinates](https://github.com/ScottGledhill/kudomon/blob/master/images/check_coordinates.png)
+
 # Check Kudomon Caught
 
+![caught](https://github.com/ScottGledhill/kudomon/blob/master/images/check_kudomon.png)
 # Create Battle
 
 # Deal damage
 
 # Win
+
+-------------
+[Scott Gledhill](https://github.com/ScottGledhill)
