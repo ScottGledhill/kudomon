@@ -17,6 +17,7 @@ describe KudomonTrainer do
     end
   end
 
+
   context 'moving' do
     it 'can move south' do
       kudomon.move('s')
@@ -25,7 +26,8 @@ describe KudomonTrainer do
 
     it 'can move north' do
       kudomon.move('n')
-      expect(kudomon.coordinates).to eq [0,1]
+      kudomon.move('n')
+      expect(kudomon.coordinates).to eq [0,2]
     end
 
     it 'can move east' do
@@ -47,7 +49,6 @@ describe KudomonTrainer do
     end
 
     it 'can check if a kudomon is at these coordinates and add to collection' do
-      kudomon.move('n')
       expect(kudomon.move('n')).to eq 'Sourbulb was added to your collection'
     end
 
