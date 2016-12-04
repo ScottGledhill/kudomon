@@ -3,16 +3,11 @@ module Water
   WATER =
   {
    'Psscannon' => {
-     :name => 'Psscannon',
-
-     :HP => 12,
-     :CP => 220
+     :name => 'Psscannon'
    },
 
    'Supersoka' => {
-     :name => 'Supersoka',
-     :HP => 900,
-     :CP => 15
+     :name => 'Supersoka'
    }
   }
 end

@@ -1,13 +1,13 @@
-require 'location'
+require 'spawn'
 
 class Kudomon
-  attr_reader :coordinates, :kudomon, :location
+  attr_reader :coordinates, :kudomon, :spawnn
   include Electric
 
   def initialize
     @coordinates = [0, 0]
     @kudomon = [ELECTRIC['Chickapu']]
-    @location = Location.new
+    @spawnn = Spawn.new
     kudomon_spawn
   end
 
@@ -20,7 +20,7 @@ class Kudomon
   end
 
   def nearby?
-    locations = location.creatures.map {|kudo| kudo[:location]}
+    locations = spawnn.creatures.map {|kudo| kudo[:location]}
     nearby = locations.any? {|loc| loc[0].between?(coordinates[0]-2,
     coordinates[0]+2) && loc[1].between?(coordinates[0]-2, coordinates[0]+2)}
     return 'Kudomon nearby, keep looking!' if nearby === true
@@ -30,18 +30,18 @@ class Kudomon
   private
 
   def kudomon_check(coordinates)
-    return "Nothing here" if location.creatures.any? {|kudo| kudo[:location] == coordinates} == false
+    return "Nothing here" if spawnn.creatures.any? {|kudo| kudo[:location] == coordinates} == false
     kudomon_add(coordinates)
   end
 
   def kudomon_add(coordinates)
-    caught_kudo = location.creatures.select{|kudo| kudo[:location] == coordinates }
+    caught_kudo = spawnn.creatures.select{|kudo| kudo[:location] == coordinates }
     kudomon << caught_kudo[0]
     kudomon.uniq! {|kudo| kudo[:name] == caught_kudo[0][:name] }
     "#{caught_kudo[0][:name]} was added to your collection"
   end
 
   def kudomon_spawn
-    location.create_random_location
+    spawnn.create_random_spawn
   end
 end

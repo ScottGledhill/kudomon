@@ -3,15 +3,11 @@ module Pyschic
   PYSCHIC =
   {
    'Sleepy' => {
-     :name => 'Sleepy',
-     :HP => 100,
-     :CP => 6
+     :name => 'Sleepy'
    },
 
    'Moooooow' => {
-     :name => 'Moooooow',
-     :HP => 600,
-     :CP => 76
+     :name => 'Moooooow'
    }
   }
 end

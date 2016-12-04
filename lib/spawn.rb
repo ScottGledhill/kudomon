@@ -5,7 +5,7 @@ require 'kudomon_types/psychic'
 require 'kudomon_types/rock'
 require 'kudomon_types/water'
 
-class Location
+class Spawn
   attr_reader :creatures
   include Electric
   include Fire
@@ -21,7 +21,9 @@ class Location
     WATER['Supersoka']]
   end
 
-  def create_random_location
+  def create_random_spawn
+    creatures.map {|kudo| kudo.store(:HP, rand(100..1000))}
+    creatures.map {|kudo| kudo.store(:CP, rand(30..300))}
     creatures.map {|kudo| kudo.store(:location, [rand(-20..20),rand(-20..20)])}
     creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
   end

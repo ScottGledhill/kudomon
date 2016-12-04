@@ -1,5 +1,5 @@
 class Battle
-  attr_reader :player1, :player2, :player1hp, :player2hp, :player1cp, :player2cp, :first
+  attr_reader :player1, :player2, :player1hp, :player2hp, :player1cp, :player2cp, :turn
 
   def initialize(player1, player2)
     @player1 = player1.kudomon
@@ -11,20 +11,31 @@ class Battle
   end
 
   def fight
-    versus
+    choose_kudomon
     random_first_move
+    attack
   end
 
-  def versus
-    "#{player1.sample[:name]} vs #{player2.sample[:name]}"
+  def choose_kudomon
+    "Players 1's #{player1.sample[:name]} vs Player 2's #{player2.sample[:name]}"
   end
 
   def random_first_move
-    @first = [player1,player2].sample
-    "#{first[0][:name]} goes first!"
+    @turn = [player1,player2].sample
+    "#{turn[0][:name]} goes first!"
   end
 
   def attack
-    p first
+    @turn == player1 ? player1_attack : player2_attack
+  end
+
+  def player1_attack
+    @player2hp = player2hp - player1cp
+    return "Player1 wins" if player2hp <= 0
+    player2_attack
+  end
+
+  def player2_attack
+
   end
 end

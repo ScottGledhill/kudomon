@@ -13,7 +13,7 @@ describe Battle do
     end
 
     it 'can announce who the fight is between' do
-      expect(battle.versus).to eq "Chickapu vs Chickapu"
+      expect(battle.choose_kudomon).to eq  "Players 1's Chickapu vs Player 2's Chickapu"
     end
 
     it 'can pick a random player to go first' do
@@ -24,8 +24,9 @@ describe Battle do
   context 'fighting' do
 
     it 'can deal damage to kudomon' do
-      expect{battle.attack}.to change{battle.player2hp}.by(0..100)
+      expect{battle.player1_attack}.to change{battle.player2hp}
     end
+    
     it 'can determine a winner' do
       expect(battle.fight).to eq ''
     end
