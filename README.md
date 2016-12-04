@@ -11,6 +11,12 @@ Require all the necessary files Dir["./lib/*.rb"].each { |file| load file }
 # How to Play
 
 # Create necessary players
+```
+player1 = KudomonTrainer.new
+```
+``` 
+player2 = KudomonTrainer.new
+```
 
 # Move
 
