@@ -1,9 +1,9 @@
 require 'battle'
-require 'kudomon'
+require 'kudomon_trainer'
 
 describe Battle do
-  player1 = Kudomon.new
-  player2 = Kudomon.new
+  player1 = KudomonTrainer.new
+  player2 = KudomonTrainer.new
   subject(:battle) {described_class.new(player1, player2)}
 
   context 'can create a battle with two trainers' do

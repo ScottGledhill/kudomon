@@ -1,6 +1,6 @@
-require 'kudomon'
+require 'kudomon_trainer'
 
-describe Kudomon do
+describe KudomonTrainer do
   subject(:kudomon) {described_class.new}
 
   context 'on creation' do

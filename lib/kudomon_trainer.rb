@@ -1,6 +1,6 @@
 require_relative 'spawn'
 
-class Kudomon
+class KudomonTrainer
   attr_reader :coordinates, :kudomon, :spawnn
   include Electric
 
