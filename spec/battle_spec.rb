@@ -17,13 +17,13 @@ describe Battle do
     end
 
     it 'can pick a random player to go first' do
-      expect(battle.random_first_move).eq "player1"
+      expect(battle.random_first_move).to eq 'Chickapu goes first!'
     end
   end
 
   context 'fighting' do
     it 'can determine a winner' do
-      expect(battle.fight).to eq 'wins'
+      expect(battle.fight).to eq ''
     end
   end
 end

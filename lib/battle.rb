@@ -8,11 +8,15 @@ class Battle
 
   def fight
     versus
-
+    random_first_move
   end
 
   def versus
     "#{player1.sample[:name]} vs #{player2.sample[:name]}"
   end
 
+  def random_first_move
+    first = [player1,player2].sample
+    "#{first[0][:name]} goes first!"
+  end
 end
