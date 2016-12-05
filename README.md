@@ -37,6 +37,8 @@ player2 = KudomonTrainer.new
 
 ![battle](https://github.com/ScottGledhill/kudomons/blob/master/images/fight.png)
 
+Some Types of Kudomon, are super effective vs other types of Kudomon and deal double damage!
+
 
 -------------
 [Scott Gledhill](https://github.com/ScottGledhill)
