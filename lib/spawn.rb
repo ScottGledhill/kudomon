@@ -12,24 +12,18 @@ module Spawn
 
   def create_kudomon
     creatures = load_kudomon
-    # create instances of kudo
     randomize_attributes(creatures)
-    # set_sourbulb
   end
 
   def randomize_attributes(creatures)
     kudomon = []
     creatures.each do |creature|
       kudomon << Kudomon.new(creature[:name], creature[:type],
-        rand(200..1000),
-        rand(30..300),
-        [rand(-10..10),rand(-10..10)])
+        random_hp_generation,
+        random_cp_generation,
+        random_spawn_location)
     end
     kudomon
-  end
-
-  def random_spawn_location
-    location = [rand(-10..10),rand(-10..10)]
   end
 
   def load_kudomon
@@ -39,8 +33,19 @@ module Spawn
     WATER['Supersoka']
   end
 
+  def random_hp_generation
+    rand(200..1000)
+  end
+
+  def random_cp_generation
+    rand(30..300)
+  end
+
+  def random_spawn_location
+    [rand(-10..10),rand(-10..10)]
+  end
+
   def set_sourbulb
-    byebug
     @kudomon.each{|kudo| kudo.location = [0,1] if kudo.name == "Sourbulb"}
   end
 end
