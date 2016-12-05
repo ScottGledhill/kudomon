@@ -45,7 +45,9 @@ class KudomonTrainer
 
   def kudomon_add(coordinates)
     caught_kudo = @kudomon_spawn.find {|kudo| kudo.location == coordinates }
-    kudomon << caught_kudo
-    "#{caught_kudo.name} was added to your collection"
+    unless kudomon.include?(caught_kudo)
+      kudomon << caught_kudo
+      "#{caught_kudo.name} was added to your collection"
+    end
   end
 end

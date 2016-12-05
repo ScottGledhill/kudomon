@@ -44,7 +44,7 @@ describe KudomonTrainer do
       kudomon_trainer.move('n')
       kudomon_trainer.move('s')
       kudomon_trainer.move('n')
-      expect(kudomon_trainer.kudomon.length). to eq 2
+      expect(kudomon_trainer.kudomon.length). to eq 1
     end
   end
 end

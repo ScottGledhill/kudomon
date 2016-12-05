@@ -21,7 +21,7 @@ module Spawn
     kudomon = []
     creatures.each do |creature|
       kudomon << Kudomon.new(creature[:name], creature[:type],
-        rand(100..1000),
+        rand(200..1000),
         rand(30..300),
         [rand(-10..10),rand(-10..10)])
     end
