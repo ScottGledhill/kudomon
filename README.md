@@ -6,8 +6,8 @@ Clone the repo at git@github.com:ScottGledhill/kudomon.git <br>
 cd into the directory <br>
 Bundle install <br>
 Enter IRB <br>
-Require all the necessary files 
 ```
+Require all the necessary files using
 Dir["./lib/*.rb"].each { |file| load file }
 ```
 
@@ -31,11 +31,11 @@ player2 = KudomonTrainer.new
 
 # Check Kudomon Caught
 
-![caught](https://github.com/ScottGledhill/kudomon/blob/master/images/check_kudomon.png)
+![caught](https://github.com/ScottGledhill/kudomons/blob/master/images/check_kudomon.png)
 
 # Create Battle, deal damage, and win!
 
-![battle](https://github.com/ScottGledhill/kudomon/blob/master/images/fight.png)
+![battle](https://github.com/ScottGledhill/kudomons/blob/master/images/fight.png)
 
 
 -------------
