@@ -59,11 +59,11 @@ describe KudomonTrainer do
       expect(kudomon.kudomon.length). to eq 2
     end
   end
-
-  context 'nearby kudomon' do
-    it 'can tell you if their are nearby kudomon in either direction' do
-      kudomon.move('n')
-      expect(kudomon.nearby?).to eq 'Kudomon nearby, keep looking!'
-    end
-  end
+  #
+  # context 'nearby kudomon' do
+  #   it 'can tell you if their are nearby kudomon in either direction' do
+  #     kudomon.move('n')
+  #     expect(kudomon.nearby?).to eq 'Kudomon nearby, keep looking!'
+  #   end
+  # end
 end

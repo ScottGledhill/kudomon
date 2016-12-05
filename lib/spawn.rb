@@ -1,7 +1,7 @@
 require 'require_all'
 require_all 'lib'
 
-class Spawn
+module Spawn
   attr_reader :creatures
   include Electric
   include Fire
@@ -10,7 +10,7 @@ class Spawn
   include Rock
   include Water
 
-  def initialize
+  def create_kudomon
     @creatures = load_kudomon
     randomize_attributes
     set_sourbulb
@@ -25,19 +25,14 @@ class Spawn
     end
   end
 
-  def set_sourbulb
-    creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
-  end
-
-  def randomize_location
-    p creatures.map {|kudo| kudo.store(:location, [rand(-10..10),rand(-10..10)])}
-    creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
-  end
-
   def load_kudomon
     @creatures = ELECTRIC['Chickapu'],ELECTRIC['BuzzElecta'],FIRE['Mancharred'],
     FIRE['FatFireFace'],GRASS['Sourbulb'],GRASS['Execute'],PSYCHIC['Sleepy'],
     PSYCHIC['Moooooow'],ROCK['Goodude'],ROCK['DwayneJohnson'],WATER['Psscannon'],
     WATER['Supersoka']
+  end
+
+  def set_sourbulb
+    creatures.each{|kudo| kudo[:location] = [0,1] if kudo[:name]== "Sourbulb"}
   end
 end
