@@ -38,15 +38,19 @@ class KudomonTrainer
     return "Nothing here" if spawnn.creatures.any? {|kudo| kudo[:location] == coordinates} == false
     kudomon_add(coordinates)
   end
+  #
+  # def kudomon_add(coordinates)
+  #   caught_kudo = spawnn.creatures.select{|kudo| kudo[:location] == coordinates }
+  #   kudomon << caught_kudo[0]
+  #   kudomon.uniq! {|kudo| kudo[:name] == caught_kudo[0][:name] }
+  #   "#{caught_kudo[0][:name]} was added to your collection"
+  # end
 
   def kudomon_add(coordinates)
-    caught_kudo = spawnn.creatures.select{|kudo| kudo[:location] == coordinates }
-    kudomon << caught_kudo[0]
-    kudomon.uniq! {|kudo| kudo[:name] == caught_kudo[0][:name] }
-    "#{caught_kudo[0][:name]} was added to your collection"
+    #  caught_kudo = Kudomon.select {|kudo| kudo.location == coordinates }
   end
 
   def kudomon_spawn
-    spawnn.create_random_spawn
+    # spawnn.create_random_spawn
   end
 end

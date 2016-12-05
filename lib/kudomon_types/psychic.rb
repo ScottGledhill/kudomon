@@ -1,15 +1,15 @@
-module Pyschic
+module Psychic
 
-  PYSCHIC =
+  PSYCHIC =
   {
    'Sleepy' => {
      :name => 'Sleepy',
-     :type => 'Pyschic'
+     :type => 'Psychic'
    },
 
    'Moooooow' => {
      :name => 'Moooooow',
-     :type => 'Pyschic'
+     :type => 'Psychic'
    }
   }
 end
