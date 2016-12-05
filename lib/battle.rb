@@ -21,7 +21,6 @@ class Battle
   end
 
   def random_first_move
-    #check random string method
     @turn = ['1', '2'].sample
     "player #{turn} goes first!"
   end
@@ -48,22 +47,20 @@ class Battle
 
   private
 
+  DOUBLE_DAMAGE = {
+    Water: ['Fire'],
+    Fire: ['Grass'],
+    Grass: ['Rock'],
+    Rock: ['Electric'],
+    Electric: ['Water'],
+    Psychic: ['Water', 'Fire', 'Grass', 'Rock', 'Electric']
+  }
+
   def player1_double_damage?
-    return true if player1.selected_fighter.type == 'Water' && player2.selected_fighter.type == 'Fire'
-    return true if player1.selected_fighter.type == 'Fire' && player2.selected_fighter.type == 'Grass'
-    return true if player1.selected_fighter.type == 'Grass' && player2.selected_fighter.type == 'Rock'
-    return true if player1.selected_fighter.type == 'Rock' && player2.selected_fighter.type == 'Electric'
-    return true if player1.selected_fighter.type == 'Electric' && player2.selected_fighter.type == 'Water'
-    return true if player1.selected_fighter.type == 'Pyschic' && player2.selected_fighter.type != 'Pyschic'
+    DOUBLE_DAMAGE[player1.selected_fighter.type.to_sym].include?(player2.selected_fighter.type)
   end
 
   def player2_double_damage?
-    #add hash constant
-    return true if player2.selected_fighter.type == 'Water' && player1.selected_fighter.type == 'Fire'
-    return true if player2.selected_fighter.type == 'Fire' && player1.selected_fighter.type == 'Grass'
-    return true if player2.selected_fighter.type == 'Grass' && player1.selected_fighter.type == 'Rock'
-    return true if player2.selected_fighter.type == 'Rock' && player1.selected_fighter.type == 'Electric'
-    return true if player2.selected_fighter.type == 'Electric' && player1.selected_fighter.type == 'Water'
-    return true if player2.selected_fighter.type == 'Pyschic' && player1.selected_fighter.type != 'Pyschic'
+    DOUBLE_DAMAGE[player2.selected_fighter.type.to_sym].include?(player1.selected_fighter.type)
   end
 end
